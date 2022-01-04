@@ -1,13 +1,18 @@
 ## Python Scripts and how to run them
 ### On Raspberryshake
 The scripts are located under path "~/dataCollection/"
-- *data_collect.py*
+- **data_collect.py**
   - The script to do the data collection.
   - This a stable version, store the seismic and acoustic data locally
   - While running, only the curves of seismic data (not acoustic) can be shown in real-time by running "realtime_show_seismic.py" script in th laptop, see details bellow.
-  - How to run: "./data_collect.py -f $filename"
-    -  $filename is an essential argument
-- *data_collect_with_socket.py*
+  - How to run: "*./data_collect.py -f $filename*"
+    -  $filename is an essential argument refering to the name of the current round of experiment.
+  - Data location: "~/dataCollection/data/$filename/"
+    -  Will generate 5 files: 
+      -  AUD_$filename.csv -- acoustic data
+      -  EHZ_$filename.csv, ENE_$filename.csv, ENN_$filename.csv, ENZ_$filename.csv -- seismic data
+  -  How to stop collection: press "ctrl+V"
+- **data_collect_with_socket.py**
 
 ### On Laptop
 The scripts are located under path "~/collection/"
