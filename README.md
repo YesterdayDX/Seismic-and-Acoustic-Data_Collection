@@ -1,3 +1,20 @@
+# Seismic and Acoustic Data Collection
+## Device setup
+### Raspberry shake
+- username: myshake
+- password: shakeme
+### Laptop
+- username: Robot
+- password:1qaz
+### Connect the laptop with raspberry shake
+1. Power on the raspberry shake.
+2. Connect raspberry shake and the laptop with ethernet cable.
+3. In laptop, open a browser, access "rs.local" (Need to wait several seconds for building the connection.
+4. Remeber $IP (Ip address) and $StationID (Station ID) of the raspberry shake, the webpage will show that.
+5. For example **$IP = 10.42.0.123** and **$StationID = R3596$$.
+6. Open a termianl on laptop, log in the raspberry shake with *ssh myshake@$IP*, (password: shakeme)
+   For example: *ssh myshake@10.42.0.123*
+
 ## Python Scripts and how to run them
 ### On Raspberryshake
 The scripts are located under path ~/dataCollection/
@@ -27,11 +44,11 @@ The scripts are located under path "~/collection/"
     - $IP -- IP address of raspberry shake
     - $StationID -- Station IS of raspberry shake
   - **How to stop**: Press "ctr+C"
-  - **Script works when "data_collect.py" or "data_collect_with_socket.py" is running on raspberry shake
+  - **Script works when "data_collect.py" or "data_collect_with_socket.py" is running on raspberry shake**
 - **realtime_show_acoustic.py**
   - This script is for real time showing the acoustic curves.
   - **How to run**: *python3 realtime_show_seismic --ip $IP*
     - $IP -- IP address of raspberry shake
   - **How to stop**: Press "ctr+C"
-  - **Only work when "data_collect_with_socket.py" is running on raspberry shake
+  - **Only work when "data_collect_with_socket.py" is running on raspberry shake**
 
