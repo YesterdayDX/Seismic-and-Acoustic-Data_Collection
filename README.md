@@ -12,7 +12,7 @@
 3. In laptop, open a browser, access "rs.local" (Need to wait several seconds for building the connection.
 4. Remeber $IP (Ip address) and $StationID (Station ID) of the raspberry shake, the webpage will show that.
 5. For example **$IP = 10.42.0.123** and **$StationID = R3596$$.
-6. Open a termianl on laptop, log in the raspberry shake with *ssh myshake@$IP*, (password: shakeme)
+6. Open a termianl on laptop, log in the raspberry shake with *ssh myshake@$IP*, (password: shakeme)\\
    For example: *ssh myshake@10.42.0.123*
 
 ## Python Scripts and how to run them
