@@ -5,7 +5,7 @@ The scripts are located under path ~/dataCollection/
   - The script to do the data collection.
   - This a stable version, store the seismic and acoustic data locally
   - While running, only the curves of seismic data (not acoustic) can be shown in real-time by running *realtime_show_seismic.py* script in th laptop, see details bellow.
-  - **How to run**: <font color=Blue> *./data_collect.py -f $filename* <font>
+  - **How to run**: <font color=Blue> *./data_collect.py -f $filename* </font>
     -  *$filename* is an essential argument refering to the name of the current round of experiment.
   - **Data location**: *~/dataCollection/data/$filename/*
     -  Will generate 5 files: 
