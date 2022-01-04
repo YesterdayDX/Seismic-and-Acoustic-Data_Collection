@@ -52,3 +52,12 @@ The scripts are located under path "~/collection/"
   - **How to stop**: Press "ctr+C"
   - **Only work when "data_collect_with_socket.py" is running on raspberry shake**
 
+## Some notes
+### Disconnect the laptop and leave the sensor alone
+- Idea **tmux**
+- **tmux** is a terminal multiplexer, it allows the scripts keep running after the ssh connection broken.
+### Use Battery
+- Can use battery to provide power for raspberry shake. But currently don't get a good battery which could provide stable power supply. Data may loss, program running speed may be slower, because electric current is not stable.
+### Data Collection: time of duration
+- Acoustic data is high volumn, speed of data generation may be higher than the speed of writing acoustic data to files. 
+- I would suggest short time of duration (e.g., 10 mins) for each round.
