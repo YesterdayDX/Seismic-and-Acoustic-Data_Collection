@@ -54,6 +54,7 @@ The scripts are located under path "~/collection/"
   - **Only work when "acoustic_server.py" is running on raspberry shake**
 
 ## Some notes
+### All scripts (laptop & RaspberryShake) are run with "*python3*" instead of "*python*"
 ### Disconnect the laptop and leave the sensor alone
 - Idea **tmux**
 - **tmux** is a terminal multiplexer, it allows the scripts keep running after the ssh connection broken.
