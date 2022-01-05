@@ -40,14 +40,12 @@ The scripts are located under path ~/dataCollection/
 The scripts are located under path "~/collection/"
 - **realtime_show_seismic.py**
   - This script is for real time showing the seismic curves.
-  - **How to run**: *python3 realtime_show_seismic -i $IP --s $StationID*
-    - $IP -- IP address of raspberry shake
+  - **How to run**: *python3 realtime_show_seismic -s $StationID*
     - $StationID -- Station IS of raspberry shake
   - **How to stop**: Press "ctr+C"
 - **realtime_show_acoustic.py**
   - This script is for real time showing the acoustic curves.
-  - **How to run**: *python3 realtime_show_seismic -i $IP*
-    - $IP -- IP address of raspberry shake
+  - **How to run**: *python3 realtime_show_seismic
   - **How to stop**: Press "ctr+C"
   - **Only work when "acoustic_server.py" is running on raspberry shake**
 
