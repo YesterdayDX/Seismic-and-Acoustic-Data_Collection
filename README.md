@@ -41,11 +41,11 @@ The scripts are located under path "~/collection/"
 - **realtime_show_seismic.py**
   - This script is for real time showing the seismic curves.
   - **How to run**: *python3 realtime_show_seismic -s $StationID*
-    - $StationID -- Station IS of raspberry shake
+    - $StationID -- Station ID of raspberry shake, (can be found in the sensor or by typing "rs.local" in web brower)
   - **How to stop**: Press "ctr+C"
 - **realtime_show_acoustic.py**
   - This script is for real time showing the acoustic curves.
-  - **How to run**: *python3 realtime_show_seismic
+  - **How to run**: *python3 realtime_show_seismic*
   - **How to stop**: Press "ctr+C"
   - **Only work when "acoustic_server.py" is running on raspberry shake**
 
