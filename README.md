@@ -27,40 +27,42 @@ The scripts are located under path ~/dataCollection/
        -  $CHANNEL = 0 ---> Do not collect acoustic data
        -  $CHANNEL = 1 ---> Collect data from 1 microphone [Default value]
        -  $CHANNEL = 4 ---> Collect data from all 4 microphones
-  - **Data location**: *~/dataCollection/data/$filename/*
+  - **Data location**: *~/dataCollection/data/$FILENAME/*
     -  Will generate 5 files: 
-      -  AUD_$filename.csv -- acoustic data
-      -  EHZ_$filename.csv, ENE_$filename.csv, ENN_$filename.csv, ENZ_$filename.csv -- seismic data
+      -  AUD_$FILENAME.csv ---> acoustic data
+      -  EHZ_$FILENAME.csv, ENE_$FILENAME.csv, ENN_$FILENAME.csv, ENZ_$FILENAME.csv ---> seismic data
   -  **How to stop**: press "ctrl+C"
-  -  **Important:** Use this script if we do not need to show acoustic curve in real-time.
-- **data_collect_with_socket.py**
-  - This script is an upgrade version of *data_collect.py*, curve of acoustic data can be shown in laptop, see bellow for details of showing data in real-time.
-  - **How to run**: *python3 data_collect_with_socket.py -f $filename -s yes*
-    - "-s yes" means the we create a socket to transmit acoustic data
-  - **Important:** May exist bugs, use this script only for showing acoustic data in real-time
+  -  **Important:** Use this script to do long time data collection.
+
+- **acoustic_server.py**
+   - This is a helper function for real time acoustic data demonstration.
+   - Will not store any data locally.
 
 ### On Laptop
 The scripts are located under path "~/collection/"
 - **realtime_show_seismic.py**
   - This script is for real time showing the seismic curves.
-  - **How to run**: *python3 realtime_show_seismic --ip $IP --station $StationID*
+  - **How to run**: *python3 realtime_show_seismic -i $IP --s $StationID*
     - $IP -- IP address of raspberry shake
     - $StationID -- Station IS of raspberry shake
   - **How to stop**: Press "ctr+C"
-  - **Script works when "data_collect.py" or "data_collect_with_socket.py" is running on raspberry shake**
 - **realtime_show_acoustic.py**
   - This script is for real time showing the acoustic curves.
-  - **How to run**: *python3 realtime_show_seismic --ip $IP*
+  - **How to run**: *python3 realtime_show_seismic -i $IP*
     - $IP -- IP address of raspberry shake
   - **How to stop**: Press "ctr+C"
-  - **Only work when "data_collect_with_socket.py" is running on raspberry shake**
+  - **Only work when "acoustic_server.py" is running on raspberry shake**
 
 ## Some notes
 ### Disconnect the laptop and leave the sensor alone
 - Idea **tmux**
 - **tmux** is a terminal multiplexer, it allows the scripts keep running after the ssh connection broken.
+- **How to use**
+   1. Create a tmux session: *tmux new -s $SESSION_ID, (e.g., tmux new -s data_collect)*
 ### Use Battery
 - Can use battery to provide power for raspberry shake. But currently don't get a good battery which could provide stable power supply. Data may loss, program running speed may be slower, because electric current is not stable.
+- Battery may not work under low temperature is low.
 ### Data Collection: time of duration
 - Acoustic data is high volumn, speed of data generation may be higher than the speed of writing acoustic data to files. 
 - I would suggest short time of duration (e.g., 10 mins) for each round.
+- data_collection.py can run for hours while collecting 1 microphone acoustic data.
