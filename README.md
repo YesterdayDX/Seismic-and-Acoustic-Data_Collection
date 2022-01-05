@@ -10,7 +10,7 @@
 1. Power on the raspberry shake.
 2. Connect raspberry shake and the laptop with ethernet cable.
 3. Open a terminal by pressing "***crtl+alt+t***", go to the work directory with command "***cd ~/collection***"
-4. Run "***python3 sync_clock.py***" to sync the time of raspberry shake with the laptop. (Need the password of raspberry shake: shakeme)
+4. Run "***python3 sync_clock.py***" to sync the time of raspberry shake with the laptop. (Need the password of raspberry shake: shakeme) **Each time the raspberry shake boots up, we synchronize its time with our laptop, then we can log in (ssh myshake@rs.local) or exit (type "exit" and presee enter in the terminal) raspberry shake normally.**
 5. Log in to raspberry shake with command "***ssh myshake@rs.local***", (password: shakeme) 
 
 ## Python Scripts and how to run them
