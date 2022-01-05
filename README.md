@@ -60,12 +60,12 @@ The scripts are located under path "~/collection/"
 - **How to use**
    - Create a tmux session: *tmux new -s $SESSION_ID, (e.g., tmux new -s data_collect)*
    - Run your code
-      - *cd ~/dataCollection.*
-      - *python3 data_collect.py -f test -c 4*
+      - "*cd ~/dataCollection.*"
+      - "*python3 data_collect.py -f test -c 4*"
    - Detached from tmux session: press ctrl+b, then press d
    - Now the script will keep running when the laptop is disconnected.
-   - We can re-join the tmux session by *tmux a -t $SESSION_ID*
-      - Use *tmux ls* to see activate tmux sessions
+   - We can re-join the tmux session by "*tmux a -t $SESSION_ID*"
+      - Use "*tmux ls*" to see activate tmux sessions
 ### Use Battery
 - Can use battery to provide power for raspberry shake. But currently don't get a good battery which could provide stable power supply. Data may loss, program running speed may be slower, because electric current is not stable.
 - Battery may not work under low temperature is low.
