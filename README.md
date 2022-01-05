@@ -9,11 +9,9 @@
 ### Connect the laptop with raspberry shake
 1. Power on the raspberry shake.
 2. Connect raspberry shake and the laptop with ethernet cable.
-3. In laptop, open a browser, access "rs.local" (Need to wait several seconds for building the connection.
-4. Remeber $IP (Ip address) and $StationID (Station ID) of the raspberry shake, the webpage will show that.
-5. For example **$IP = 10.42.0.123** and **$StationID = R3596**.
-6. Open a termianl on laptop, log in the raspberry shake with *ssh myshake@$IP*, (password: shakeme)  
-   For example: ***ssh myshake@10.42.0.123***
+3. Open a terminal by pressing "***crtl+alt+t***", go to the work directory with command "***cd ~/collection***"
+4. Run "***python3 sync_clock.py***" to sync the time of raspberry shake with the laptop. (Need the password of raspberry shake: shakeme)
+5. Log in to raspberry shake with command "***ssh myshake@rs.local***", (password: shakeme) 
 
 ## Python Scripts and how to run them
 ### On Raspberryshake
